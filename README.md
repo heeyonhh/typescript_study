@@ -61,3 +61,13 @@
       const me: MayHaveEmail = {}; // 가능
       const you: MayHaveEmail = { email: 'test@abc.com' }; // 가능
       const all: MayHaveEmail = { email: 'capt@hero.com', address: 'Pangyo' }; // 가능
+
+- Mapped :  자바스크립트의 map 함수를 타입에 적용
+      
+      type Heroes = 'Hulk' | 'Thor' | 'Capt';
+      type HeroProfiles = { [K in Heroes]: number };
+      const heroInfo: HeroProfiles = {
+        Hulk: 54,
+        Thor: 1000,
+        Capt: 33,
+      }
